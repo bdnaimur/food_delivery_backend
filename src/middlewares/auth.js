@@ -5,16 +5,14 @@ import userModel from '../models/user.model.js';
 dotenv.config();
 
 const auth = async(req, res, next) => {
-  const token = req.headers;
-
-  console.log("token", token);
+  const token = req.headers?.authorization;
   
   if (!token) {
     return res.status(401).json({ msg: 'No token, authorization denied' });
   }
 
   try {
-    const decoded = jwt.verify(token?.authorization?.split(" ")[1], process.env.JWT_SECRET);
+    const decoded = jwt.verify(token.split(" ")[1], process.env.JWT_SECRET);
     
     const user = await userModel.findOne({ email: decoded?.email });
     req.user = user;

@@ -22,6 +22,12 @@ const subCategorySchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
+  menuItems: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'MenuItem',
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,

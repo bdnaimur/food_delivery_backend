@@ -8,7 +8,6 @@ const addAuditTrail = function (schema) {
   schema.pre('save', async function (next) {
     const doc = this;
     const isNew = doc.isNew;
-    console.log("doc from audit", this, "isNew", isNew);
     
     const changes = {};
 
@@ -30,9 +29,9 @@ const addAuditTrail = function (schema) {
     //     }
     // }
 
-    console.log("doc._doc", doc._doc);
     
     if (isNew) {
+      console.log("doc._doc_isNew", doc._doc);
       // For CREATE operations, include all properties
       for (const key in doc._doc) {
         if (doc._doc.hasOwnProperty(key) && key !== "password" && key !== "updatedAt") {
@@ -40,6 +39,7 @@ const addAuditTrail = function (schema) {
         }
       }
     } else {
+      console.log("doc._doc_isUpdate", doc._doc);
       for (const key in doc._doc) {
         if (doc.isModified(key) && key !== "updatedAt") {
           changes[key] = doc[key];
@@ -55,7 +55,7 @@ const addAuditTrail = function (schema) {
     console.log("changes", changes);
 
     await AuditTrail.create({
-      userId: doc.userId,  // Assuming userId is part of the update
+      userId: doc._doc?.userId,  // Assuming userId is part of the update
       action: action,
       model: doc.constructor.modelName,
       modelId: doc._id,

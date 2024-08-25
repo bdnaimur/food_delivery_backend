@@ -8,6 +8,8 @@ import auditRoutes from './routes/auditRoutes.js'
 import category from './routes/categoryRoutes.js'
 import subCategories from './routes/subCategoryRoutes.js'
 import errorHandler from './middlewares/errorHandler.js';
+import menuItem from './routes/menuItemRoutes.js';
+import restaurant from './routes/restaurantRoutes.js';
 
 // Create a Winston logger
 const logger = winston.createLogger({
@@ -44,6 +46,8 @@ app.use('/api/users', userRoutes);
 app.use('/api/audit', auditRoutes);
 app.use('/api/category', category);
 app.use('/api/subCategories', subCategories);
+app.use('/api/menuItem', menuItem);
+app.use('/api/restaurant', restaurant);
 
 
 // Error Handling

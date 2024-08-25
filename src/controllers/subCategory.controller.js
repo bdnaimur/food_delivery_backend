@@ -42,3 +42,12 @@ export const getSubCategoriesByCategory = async (req, res) => {
     }
   };
   
+
+  export const getAllSubCategories = async(req, res) =>{
+    try {
+      const subCategories = await SubCategory.find();
+      res.status(200).json(subCategories);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  }

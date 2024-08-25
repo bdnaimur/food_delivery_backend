@@ -5,13 +5,16 @@ import {
   getUserById,
   updateUser,
   deleteUser,
+  login,
 } from '../controllers/user.controller.js';
 import auth from '../middlewares/auth.js';
 
 const router = express.Router();
 
 // Route to create a new category
-router.post('/',auth, createUser);
+router.post('/register', createUser);
+
+router.post('/login', login);
 
 // Route to get all categories
 router.get('/',auth, getUsers);
