@@ -1,0 +1,108 @@
+menu_categories
+: 
+[{id: 847937, code: "b3a8478f-fb02-404e-bd31-5d7cad23a048", name: "Buy 1 Get 1", description: "",…},…]
+0
+: 
+{id: 847937, code: "b3a8478f-fb02-404e-bd31-5d7cad23a048", name: "Buy 1 Get 1", description: "",…}
+code
+: 
+"b3a8478f-fb02-404e-bd31-5d7cad23a048"
+description
+: 
+""
+id
+: 
+847937
+is_popular_category
+: 
+false
+name
+: 
+"Buy 1 Get 1"
+products
+: 
+[{id: 6012024, code: "8f50ff34-8d62-4ead-8db5-ec99bd2b121b", name: "Buy 1 Mendi Dejaj",…}]
+0
+: 
+{id: 6012024, code: "8f50ff34-8d62-4ead-8db5-ec99bd2b121b", name: "Buy 1 Mendi Dejaj",…}
+additives
+: 
+[]
+code
+: 
+"8f50ff34-8d62-4ead-8db5-ec99bd2b121b"
+description
+: 
+"Get another one free - 4 pcs charcoal grill chicken, mendi rice (800 gm), fattoush salad & shatta sauce"
+file_path
+: 
+"https://images.deliveryhero.io/image/fd-bd/Products/6012024.jpg?width=%s"
+half_type
+: 
+""
+id
+: 
+6012024
+is_alcoholic_item
+: 
+false
+is_bundle
+: 
+false
+is_express_item
+: 
+true
+is_sold_out
+: 
+false
+master_category_id
+: 
+4
+name
+: 
+"Buy 1 Mendi Dejaj"
+product_variations
+: 
+[{id: 6580327, code: "4510e6d6-241f-49a1-a71d-581fa10c7a3c", remote_code: "", container_price: 0,…}]
+0
+: 
+{id: 6580327, code: "4510e6d6-241f-49a1-a71d-581fa10c7a3c", remote_code: "", container_price: 0,…}
+code
+: 
+"4510e6d6-241f-49a1-a71d-581fa10c7a3c"
+container_price
+: 
+0
+id
+: 
+6580327
+price
+: 
+2651
+remote_code
+: 
+""
+topping_ids
+: 
+[]
+topping_properties
+: 
+[]
+total_price
+: 
+0
+unit_pricing
+: 
+null
+sold_out_options
+: 
+null
+tags
+: 
+["recommended-for-you", "popular"]
+0
+: 
+"recommended-for-you"
+1
+: 
+"popular"

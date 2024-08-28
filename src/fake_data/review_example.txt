@@ -1,0 +1,98 @@
+{uuid: "e3db47b4-0f93-4d40-a96e-d8a620257dc4", createdAt: "2024-06-27T19:36:57Z",…}
+commentPrettyDate
+: 
+{translationKey: "NEXTGEN_REVIEWS_X_MONTHS_AGO", timeDuration: "2"}
+timeDuration
+: 
+"2"
+translationKey
+: 
+"NEXTGEN_REVIEWS_X_MONTHS_AGO"
+createdAt
+: 
+"2024-06-27T19:36:57Z"
+isAnonymous: false
+isLiked
+: 
+false
+likeCount
+: 
+0
+productVariations
+: 
+[{id: "6580327", defaultTitle: "Buy 1 Mendi Dejaj", title: {}, unitPrice: 2651,…}]
+0
+: 
+{id: "6580327", defaultTitle: "Buy 1 Mendi Dejaj", title: {}, unitPrice: 2651,…}
+defaultTitle
+: 
+"Buy 1 Mendi Dejaj"
+id
+: 
+"6580327"
+product
+: 
+{id: "6012024", defaultTitle: "Buy 1 Mendi Dejaj", title: {en_BD: "Buy 1 Mendi Dejaj"},…}
+active
+: 
+true
+defaultTitle
+: 
+"Buy 1 Mendi Dejaj"
+description
+: 
+"Get another one free - 4 pcs charcoal grill chicken, mendi rice (800 gm), fattoush salad & shatta sauce"
+id
+: 
+"6012024"
+imageUrls
+: 
+["https://images.deliveryhero.io/image/fd-bd/Products/6012024.jpg"]
+title
+: 
+{en_BD: "Buy 1 Mendi Dejaj"}
+en_BD
+: 
+"Buy 1 Mendi Dejaj"
+title
+: 
+{}
+unitPrice
+: 
+2651
+ratings
+: 
+[{topic: "overall", score: 4}, {topic: "restaurant_food", score: 4}, {topic: "rider", score: 5}]
+0
+: 
+{topic: "overall", score: 4}
+1
+: 
+{topic: "restaurant_food", score: 4}
+2
+: 
+{topic: "rider", score: 5}
+replies
+: 
+[]
+reviewerId
+: 
+"bdbmm8su"
+reviewerName
+: 
+"Nida"
+text
+: 
+"The portion is too small "
+topReviewerTranslationKey
+: 
+""
+type
+: 
+"user"
+updatedAt
+: 
+"2024-06-27T19:36:57Z"
+uuid
+: 
+"e3db47b4-0f93-4d40-a96e-d8a620257dc4"
