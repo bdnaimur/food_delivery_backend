@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import morgan from 'morgan';
 import winston from 'winston';
 import rateLimit from 'express-rate-limit';
@@ -7,6 +8,7 @@ import userRoutes from './routes/userRoutes.js'
 import auditRoutes from './routes/auditRoutes.js'
 import category from './routes/categoryRoutes.js'
 import subCategories from './routes/subCategoryRoutes.js'
+import cuisine from './routes/cuisineRoutes.js'
 import errorHandler from './middlewares/errorHandler.js';
 import menuItem from './routes/menuItemRoutes.js';
 import restaurant from './routes/restaurantRoutes.js';
@@ -32,6 +34,7 @@ connectDB();
 // Middleware
 app.use(morgan('combined'));
 app.use(express.json());
+app.use(cors())
 
 // Rate Limiting
 const limiter = rateLimit({
@@ -46,6 +49,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/audit', auditRoutes);
 app.use('/api/category', category);
 app.use('/api/subCategories', subCategories);
+app.use('/api/cuisine', cuisine);
 app.use('/api/menuItem', menuItem);
 app.use('/api/restaurant', restaurant);
 

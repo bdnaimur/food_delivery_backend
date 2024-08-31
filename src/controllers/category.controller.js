@@ -3,12 +3,11 @@ import Category from '../models/category.model.js';
 // Create a new category
 export const createCategory = async (req, res) => {
   try {
-    const { name, description, imageUrl } = req.body;
+    const { name, description } = req.body;
     const user = req.user;
     const category = new Category({
       name,
       description,
-      imageUrl,
       userId: user._id
     });
 

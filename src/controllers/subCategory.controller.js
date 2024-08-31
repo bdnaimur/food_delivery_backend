@@ -3,7 +3,7 @@ import Category from '../models/category.model.js';
 
 export const createSubCategory = async (req, res) => {
   try {
-    const { name, description, imageUrl, categoryId } = req.body;
+    const { name, description, categoryId } = req.body;
 
     const category = await Category.findById(categoryId);
     if (!category) {
@@ -13,7 +13,6 @@ export const createSubCategory = async (req, res) => {
     const subCategory = new SubCategory({
       name,
       description,
-      imageUrl,
       categoryId,
       userId: req.user._id
     });
@@ -21,8 +20,8 @@ export const createSubCategory = async (req, res) => {
     await subCategory.save();
 
     // Optionally, update the Category to include this sub-category
-    category.subCategories.push(subCategory._id);
-    await category.save();
+    // category.subCategories.push(subCategory._id);
+    // await category.save();
 
     res.status(201).json(subCategory);
   } catch (error) {

@@ -5,27 +5,23 @@ export const createMenuItem = async (req, res) => {
   try {
     const { name, description, price, imageUrl, subCategoryId } = req.body;
 
-    const subCategoryResult = await SubCategory.findById(subCategoryId);
-    if (!subCategoryResult) {
-      return res.status(404).json({ message: 'MenuItem not found' });
-    }
+    // const subCategoryResult = await SubCategory.findById(subCategoryId);
+    // if (!subCategoryResult) {
+    //   return res.status(404).json({ message: 'MenuItem not found' });
+    // }
 
     // console.log("req.user", req.user);
     
     const menuItem = new MenuItem({
-      name,
-      description,
-      imageUrl,
-      subCategoryId,
-      price,
+     ...req.body,
       userId: req.user._id
     });
 
     await menuItem.save();
 
     // Optionally, update the MenuItem to include this sub-category
-    subCategoryResult.menuItems.push(menuItem._id);
-    await subCategoryResult.save();
+    // subCategoryResult.menuItems.push(menuItem._id);
+    // await subCategoryResult.save();
 
     res.status(201).json(menuItem);
   } catch (error) {

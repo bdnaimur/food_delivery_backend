@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import auditUtils from '../utils/auditTrail.js';
 
-const categorySchema = new mongoose.Schema({
+const cuisineSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -24,16 +24,16 @@ const categorySchema = new mongoose.Schema({
   },
 });
 
-categorySchema.pre('save', function (next) {
+cuisineSchema.pre('save', function (next) {
   this.updatedAt = Date.now();
   next();
 });
 
 
-auditUtils.addAuditTrail(categorySchema);
-auditUtils.addDeleteAuditTrail(categorySchema);
+auditUtils.addAuditTrail(cuisineSchema);
+auditUtils.addDeleteAuditTrail(cuisineSchema);
 
 
-const Category = mongoose.model('Category', categorySchema);
+const Cuisine = mongoose.model('Cuisine', cuisineSchema);
 
-export default Category;
+export default Cuisine;

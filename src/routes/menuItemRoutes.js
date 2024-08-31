@@ -10,6 +10,6 @@ router.post('/',auth, createMenuItem);
 router.get("/", getAllmenuItems)
 
 // Route to get all sub-categories under a specific category
-router.get('/:id',auth, getMenuItem);
+router.get('/:id', getMenuItem);
 
 export default router;

@@ -10,24 +10,15 @@ const subCategorySchema = new mongoose.Schema({
   description: {
     type: String,
   },
-  imageUrl: {
-    type: String,
-  },
   categoryId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Category',
     required: true,
   },
-  userId:{
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
   },
-  menuItems: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'MenuItem',
-    },
-  ],
   createdAt: {
     type: Date,
     default: Date.now,
